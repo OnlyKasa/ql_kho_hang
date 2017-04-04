@@ -1,0 +1,10 @@
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\bin\Debug\QLKhoHang.exe.config
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\bin\Debug\QLKhoHang.exe
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\bin\Debug\QLKhoHang.pdb
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.csprojResolveAssemblyReference.cache
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.Properties.Resources.resources
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.csproj.GenerateResource.Cache
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.exe
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.pdb
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\bin\Debug\Libs\QL_he_thong_kho_hang.mdf
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\bin\Debug\Libs\QL_he_thong_kho_hang_log.ldf

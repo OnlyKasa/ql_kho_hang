@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataQLK">
+  <DataContextMoniker Name="/DataQLKDataContext" />
+  <nestedChildShapes>
+    <classShape Id="35526e6e-84be-4f7e-9c28-09799d910614" absoluteBounds="6.25, 2.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataQLKDataContext/tbl_chi_tiet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0cc2af9f-5b1d-4738-b55f-0ee949603447" absoluteBounds="6.265, 2.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ebd747c5-b9fa-4a2a-aa8e-ac380dbd4bad" absoluteBounds="3.5, 3.625, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataQLKDataContext/tbl_hang_hoa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fef48b0f-b209-4008-94a8-1b0e271a6438" absoluteBounds="3.515, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7e05623-e83a-4ea3-9b59-78a061cb8ccb" absoluteBounds="3.5, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataQLKDataContext/tbl_hoa_don" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf8b6160-59cb-40e8-b0d6-fbae3813b5e9" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39efaace-5d45-4137-81b3-7b557496a42f" absoluteBounds="0.75, 2.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataQLKDataContext/tbl_kho_hang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0438d212-1175-4340-9239-ec40fb8e2dfb" absoluteBounds="0.765, 2.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 3.85179768880208); (6.25 : 3.85179768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataQLKDataContext/tbl_hang_hoa/tbl_hang_hoa_tbl_chi_tiet" />
+      <nodes>
+        <classShapeMoniker Id="ebd747c5-b9fa-4a2a-aa8e-ac380dbd4bad" />
+        <classShapeMoniker Id="35526e6e-84be-4f7e-9c28-09799d910614" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.7499995); (7.25 : 1.7499995); (7.25 : 2.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataQLKDataContext/tbl_hoa_don/tbl_hoa_don_tbl_chi_tiet" />
+      <nodes>
+        <classShapeMoniker Id="e7e05623-e83a-4ea3-9b59-78a061cb8ccb" />
+        <classShapeMoniker Id="35526e6e-84be-4f7e-9c28-09799d910614" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.85179768880208); (3.5 : 3.85179768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataQLKDataContext/tbl_kho_hang/tbl_kho_hang_tbl_hang_hoa" />
+      <nodes>
+        <classShapeMoniker Id="39efaace-5d45-4137-81b3-7b557496a42f" />
+        <classShapeMoniker Id="ebd747c5-b9fa-4a2a-aa8e-ac380dbd4bad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 2.5); (1.75 : 1.7499995); (3.5 : 1.7499995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataQLKDataContext/tbl_kho_hang/tbl_kho_hang_tbl_hoa_don" />
+      <nodes>
+        <classShapeMoniker Id="39efaace-5d45-4137-81b3-7b557496a42f" />
+        <classShapeMoniker Id="e7e05623-e83a-4ea3-9b59-78a061cb8ccb" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
