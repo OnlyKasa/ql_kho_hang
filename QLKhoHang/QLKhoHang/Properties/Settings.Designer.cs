@@ -33,5 +33,50 @@ namespace QLKhoHang.Properties {
                 return ((string)(this["QL_he_thong_kho_hangConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;Initial Catalog=C:\\USERS\\QUANG\\DESKTOP\\C#_QUAN_LY_KHO" +
+            "\\QL_KHO_HANG\\QLKHOHANG\\QLKHOHANG\\LIBS\\QL_HE_THONG_KHO_HANG.MDF;Integrated Securi" +
+            "ty=True")]
+        public string C__USERS_QUANG_DESKTOP_C__QUAN_LY_KHO_QL_KHO_HANG_QLKHOHANG_QLKHOHANG_LIBS_QL_HE_THONG_KHO_HANG_MDFConnectionString {
+            get {
+                return ((string)(this["C__USERS_QUANG_DESKTOP_C__QUAN_LY_KHO_QL_KHO_HANG_QLKHOHANG_QLKHOHANG_LIBS_QL_HE_" +
+                    "THONG_KHO_HANG_MDFConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\quang\\Desktop\\C#_quan_ly_kh" +
+            "o\\ql_kho_hang\\QL_he_thong_kho_hang.mdf;Integrated Security=True;Connect Timeout=" +
+            "30")]
+        public string QL_he_thong_kho_hangConnectionString1 {
+            get {
+                return ((string)(this["QL_he_thong_kho_hangConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=YIYI\\SQLEXPRESS;Initial Catalog=QL_KhoHang;Integrated Security=True")]
+        public string QL_KhoHangConnectionString {
+            get {
+                return ((string)(this["QL_KhoHangConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=YIYI\\SQLEXPRESS;Integrated Security=True")]
+        public string DataSourceConnectionString {
+            get {
+                return ((string)(this["DataSourceConnectionString"]));
+            }
+        }
     }
 }

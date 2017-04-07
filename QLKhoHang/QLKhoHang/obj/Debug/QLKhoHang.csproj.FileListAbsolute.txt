@@ -6,5 +6,6 @@ C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\obj\Debug\
 C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.csproj.GenerateResource.Cache
 C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.exe
 C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.pdb
-C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\bin\Debug\Libs\QL_he_thong_kho_hang.mdf
-C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\bin\Debug\Libs\QL_he_thong_kho_hang_log.ldf
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.Views.MainForm.resources
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\quang\Desktop\C#_quan_ly_kho\ql_kho_hang\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.Views.AddKhoHang.resources
