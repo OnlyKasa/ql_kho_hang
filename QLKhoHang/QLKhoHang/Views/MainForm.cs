@@ -115,8 +115,8 @@ namespace QLKhoHang.Views
 
         private void dgv_all_kho_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var a = dgv_all_kho.CurrentRow.Cells["kh_id"].Value;
-            MessageBox.Show(a.ToString());
+            string a = dgv_all_kho.CurrentRow.Cells["kh_id"].Value.ToString();
+            
         }
     }
 }

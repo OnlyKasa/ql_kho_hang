@@ -43,6 +43,7 @@
             this.txt_kh_id = new System.Windows.Forms.TextBox();
             this.tabPage_2 = new System.Windows.Forms.TabPage();
             this.addKhoHang1 = new QLKhoHang.Views.AddKhoHang();
+            this.tabPage_3 = new System.Windows.Forms.TabPage();
             this.tabControlMain.SuspendLayout();
             this.tabPage_1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -56,6 +57,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlMain.Controls.Add(this.tabPage_1);
             this.tabControlMain.Controls.Add(this.tabPage_2);
+            this.tabControlMain.Controls.Add(this.tabPage_3);
             this.tabControlMain.Location = new System.Drawing.Point(2, 5);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
@@ -206,6 +208,15 @@
             this.addKhoHang1.SubmitClickOK += new QLKhoHang.Views.AddKhoHang.SubmitHandler(this.addKhoHang1_SubmitClickOK);
             this.addKhoHang1.SubmitClickCancel += new QLKhoHang.Views.AddKhoHang.SubmitHandler(this.addKhoHang1_SubmitClickCancel);
             // 
+            // tabPage_3
+            // 
+            this.tabPage_3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_3.Name = "tabPage_3";
+            this.tabPage_3.Size = new System.Drawing.Size(687, 360);
+            this.tabPage_3.TabIndex = 2;
+            this.tabPage_3.Text = "Quản lý hàng hóa";
+            this.tabPage_3.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,5 +256,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kh_dia_chi;
         private System.Windows.Forms.DataGridViewTextBoxColumn kh_quan_ly;
         private System.Windows.Forms.DataGridViewTextBoxColumn kh_suc_chua;
+        private System.Windows.Forms.TabPage tabPage_3;
     }
 }
