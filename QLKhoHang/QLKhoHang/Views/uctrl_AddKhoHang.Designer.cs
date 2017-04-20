@@ -1,6 +1,6 @@
 ﻿namespace QLKhoHang.Views
 {
-    partial class AddKhoHang
+    partial class uctrl_AddKhoHang
     {
         /// <summary> 
         /// Required designer variable.

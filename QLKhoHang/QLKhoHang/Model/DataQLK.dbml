@@ -6,29 +6,8 @@
       <Column Name="hd_id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="hh_id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="cthd_so_luong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="tbl_hang_hoa_tbl_chi_tiet_hoa_don" Member="tbl_hang_hoa" ThisKey="hh_id" OtherKey="hh_id" Type="tbl_hang_hoa" IsForeignKey="true" />
       <Association Name="tbl_hoa_don_tbl_chi_tiet_hoa_don" Member="tbl_hoa_don" ThisKey="hd_id" OtherKey="hd_id" Type="tbl_hoa_don" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_chi_tiet_kho" Member="tbl_chi_tiet_khos">
-    <Type Name="tbl_chi_tiet_kho">
-      <Column Name="kh_id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="hh_id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="ngay_cap_nhat" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="ct_id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="tbl_hang_hoa_tbl_chi_tiet_kho" Member="tbl_hang_hoa" ThisKey="hh_id" OtherKey="hh_id" Type="tbl_hang_hoa" IsForeignKey="true" />
-      <Association Name="tbl_kho_hang_tbl_chi_tiet_kho" Member="tbl_kho_hang" ThisKey="kh_id" OtherKey="kh_id" Type="tbl_kho_hang" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_hang_hoa" Member="tbl_hang_hoas">
-    <Type Name="tbl_hang_hoa">
-      <Column Name="hh_id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="hh_ten" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="hh_noi_san_xuat" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="hh_thong_tin" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="hh_so_luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="tbl_hang_hoa_tbl_chi_tiet_hoa_don" Member="tbl_chi_tiet_hoa_dons" ThisKey="hh_id" OtherKey="hh_id" Type="tbl_chi_tiet_hoa_don" />
-      <Association Name="tbl_hang_hoa_tbl_chi_tiet_kho" Member="tbl_chi_tiet_khos" ThisKey="hh_id" OtherKey="hh_id" Type="tbl_chi_tiet_kho" />
+      <Association Name="tbl_hang_hoa_tbl_chi_tiet_hoa_don" Member="tbl_hang_hoa" ThisKey="hh_id" OtherKey="hh_id" Type="tbl_hang_hoa" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_hoa_don" Member="tbl_hoa_dons">
@@ -48,8 +27,29 @@
       <Column Name="kh_dia_chi" Type="System.String" DbType="NVarChar(70) NOT NULL" CanBeNull="false" />
       <Column Name="kh_quan_ly" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="kh_suc_chua" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="tbl_kho_hang_tbl_chi_tiet_kho" Member="tbl_chi_tiet_khos" ThisKey="kh_id" OtherKey="kh_id" Type="tbl_chi_tiet_kho" />
       <Association Name="tbl_kho_hang_tbl_hoa_don" Member="tbl_hoa_dons" ThisKey="kh_id" OtherKey="kh_id" Type="tbl_hoa_don" />
+      <Association Name="tbl_kho_hang_tbl_chi_tiet_kho" Member="tbl_chi_tiet_khos" ThisKey="kh_id" OtherKey="kh_id" Type="tbl_chi_tiet_kho" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_chi_tiet_kho" Member="tbl_chi_tiet_khos">
+    <Type Name="tbl_chi_tiet_kho">
+      <Column Name="kh_id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="hh_id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ngay_cap_nhat" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ct_id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ct_so_luong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="tbl_kho_hang_tbl_chi_tiet_kho" Member="tbl_kho_hang" ThisKey="kh_id" OtherKey="kh_id" Type="tbl_kho_hang" IsForeignKey="true" />
+      <Association Name="tbl_hang_hoa_tbl_chi_tiet_kho" Member="tbl_hang_hoa" ThisKey="hh_id" OtherKey="hh_id" Type="tbl_hang_hoa" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_hang_hoa" Member="tbl_hang_hoas">
+    <Type Name="tbl_hang_hoa">
+      <Column Name="hh_id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="hh_ten" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="hh_noi_san_xuat" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="hh_thong_tin" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="tbl_hang_hoa_tbl_chi_tiet_hoa_don" Member="tbl_chi_tiet_hoa_dons" ThisKey="hh_id" OtherKey="hh_id" Type="tbl_chi_tiet_hoa_don" />
+      <Association Name="tbl_hang_hoa_tbl_chi_tiet_kho" Member="tbl_chi_tiet_khos" ThisKey="hh_id" OtherKey="hh_id" Type="tbl_chi_tiet_kho" />
     </Type>
   </Table>
 </Database>

@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using QLKhoHang.Model;
 namespace QLKhoHang.Views
 {
-    public partial class AddKhoHang : UserControl
+    public partial class uctrl_AddKhoHang : UserControl
     {
         public delegate void SubmitHandler();
         public event SubmitHandler SubmitClickOK ;
         public event SubmitHandler SubmitClickCancel;
-        public AddKhoHang()
+        public uctrl_AddKhoHang()
         {
             InitializeComponent();
         }

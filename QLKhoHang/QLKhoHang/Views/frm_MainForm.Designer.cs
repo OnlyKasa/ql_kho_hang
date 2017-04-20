@@ -1,6 +1,6 @@
 ﻿namespace QLKhoHang.Views
 {
-    partial class MainForm
+    partial class frm_MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControlMain = new System.Windows.Forms.TabControl();
+            this.tabPage_3 = new System.Windows.Forms.TabPage();
             this.tabPage_1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_all_kho = new System.Windows.Forms.DataGridView();
@@ -36,33 +36,27 @@
             this.kh_dia_chi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kh_quan_ly = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kh_suc_chua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addKhoHang1 = new QLKhoHang.Views.uctrl_AddKhoHang();
             this.btn_them_moi = new System.Windows.Forms.Button();
             this.btn_all = new System.Windows.Forms.Button();
             this.btn_tim_kiem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_kh_id = new System.Windows.Forms.TextBox();
-            this.tabPage_2 = new System.Windows.Forms.TabPage();
-            this.addKhoHang1 = new QLKhoHang.Views.AddKhoHang();
-            this.tabPage_3 = new System.Windows.Forms.TabPage();
-            this.tabControlMain.SuspendLayout();
+            this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPage_1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_all_kho)).BeginInit();
+            this.tabControlMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControlMain
+            // tabPage_3
             // 
-            this.tabControlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlMain.Controls.Add(this.tabPage_1);
-            this.tabControlMain.Controls.Add(this.tabPage_2);
-            this.tabControlMain.Controls.Add(this.tabPage_3);
-            this.tabControlMain.Location = new System.Drawing.Point(2, 5);
-            this.tabControlMain.Name = "tabControlMain";
-            this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(695, 386);
-            this.tabControlMain.TabIndex = 0;
+            this.tabPage_3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_3.Name = "tabPage_3";
+            this.tabPage_3.Size = new System.Drawing.Size(687, 360);
+            this.tabPage_3.TabIndex = 2;
+            this.tabPage_3.Text = "Quản lý hàng hóa";
+            this.tabPage_3.UseVisualStyleBackColor = true;
             // 
             // tabPage_1
             // 
@@ -142,6 +136,16 @@
             this.kh_suc_chua.HeaderText = "Sức chứa của kho(tấn)";
             this.kh_suc_chua.Name = "kh_suc_chua";
             // 
+            // addKhoHang1
+            // 
+            this.addKhoHang1.Location = new System.Drawing.Point(6, 124);
+            this.addKhoHang1.Name = "addKhoHang1";
+            this.addKhoHang1.Size = new System.Drawing.Size(250, 214);
+            this.addKhoHang1.TabIndex = 5;
+            this.addKhoHang1.Visible = false;
+            this.addKhoHang1.SubmitClickOK += new QLKhoHang.Views.uctrl_AddKhoHang.SubmitHandler(this.addKhoHang1_SubmitClickOK);
+            this.addKhoHang1.SubmitClickCancel += new QLKhoHang.Views.uctrl_AddKhoHang.SubmitHandler(this.addKhoHang1_SubmitClickCancel);
+            // 
             // btn_them_moi
             // 
             this.btn_them_moi.Location = new System.Drawing.Point(171, 77);
@@ -188,74 +192,53 @@
             this.txt_kh_id.Size = new System.Drawing.Size(184, 20);
             this.txt_kh_id.TabIndex = 1;
             // 
-            // tabPage_2
+            // tabControlMain
             // 
-            this.tabPage_2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_2.Name = "tabPage_2";
-            this.tabPage_2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_2.Size = new System.Drawing.Size(687, 360);
-            this.tabPage_2.TabIndex = 1;
-            this.tabPage_2.Text = "Quản lý nhập xuất ";
-            this.tabPage_2.UseVisualStyleBackColor = true;
+            this.tabControlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlMain.Controls.Add(this.tabPage_1);
+            this.tabControlMain.Controls.Add(this.tabPage_3);
+            this.tabControlMain.Location = new System.Drawing.Point(2, 5);
+            this.tabControlMain.Name = "tabControlMain";
+            this.tabControlMain.SelectedIndex = 0;
+            this.tabControlMain.Size = new System.Drawing.Size(695, 386);
+            this.tabControlMain.TabIndex = 0;
             // 
-            // addKhoHang1
-            // 
-            this.addKhoHang1.Location = new System.Drawing.Point(6, 124);
-            this.addKhoHang1.Name = "addKhoHang1";
-            this.addKhoHang1.Size = new System.Drawing.Size(250, 214);
-            this.addKhoHang1.TabIndex = 5;
-            this.addKhoHang1.Visible = false;
-            this.addKhoHang1.SubmitClickOK += new QLKhoHang.Views.AddKhoHang.SubmitHandler(this.addKhoHang1_SubmitClickOK);
-            this.addKhoHang1.SubmitClickCancel += new QLKhoHang.Views.AddKhoHang.SubmitHandler(this.addKhoHang1_SubmitClickCancel);
-            // 
-            // tabPage_3
-            // 
-            this.tabPage_3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_3.Name = "tabPage_3";
-            this.tabPage_3.Size = new System.Drawing.Size(687, 360);
-            this.tabPage_3.TabIndex = 2;
-            this.tabPage_3.Text = "Quản lý hàng hóa";
-            this.tabPage_3.UseVisualStyleBackColor = true;
-            // 
-            // MainForm
+            // frm_MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 394);
             this.Controls.Add(this.tabControlMain);
-            this.Name = "MainForm";
+            this.Name = "frm_MainForm";
             this.Text = "Quản lý hệ thống kho hàng";
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            this.tabControlMain.ResumeLayout(false);
             this.tabPage_1.ResumeLayout(false);
             this.tabPage_1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_all_kho)).EndInit();
+            this.tabControlMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControlMain;
+        private System.Windows.Forms.TabPage tabPage_3;
         private System.Windows.Forms.TabPage tabPage_1;
-        private System.Windows.Forms.TabPage tabPage_2;
-        private System.Windows.Forms.Button btn_them_moi;
-        private System.Windows.Forms.Button btn_tim_kiem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_kh_id;
-        private AddKhoHang addKhoHang1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgv_all_kho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maKho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dia_chi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quan_ly;
-        private System.Windows.Forms.DataGridViewTextBoxColumn suc_chua;
-        private System.Windows.Forms.Button btn_all;
+        public System.Windows.Forms.DataGridView dgv_all_kho;
         private System.Windows.Forms.DataGridViewTextBoxColumn kh_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn kh_dia_chi;
         private System.Windows.Forms.DataGridViewTextBoxColumn kh_quan_ly;
         private System.Windows.Forms.DataGridViewTextBoxColumn kh_suc_chua;
-        private System.Windows.Forms.TabPage tabPage_3;
+        private uctrl_AddKhoHang addKhoHang1;
+        private System.Windows.Forms.Button btn_them_moi;
+        private System.Windows.Forms.Button btn_all;
+        private System.Windows.Forms.Button btn_tim_kiem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_kh_id;
+        private System.Windows.Forms.TabControl tabControlMain;
+
     }
 }

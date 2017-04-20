@@ -11,14 +11,26 @@ using System.Windows.Forms;
 
 namespace QLKhoHang.Views
 {
-    public partial class MainForm : Form
+    public partial class frm_MainForm : Form
     {
-        
-        Control.GetView view = new Control.GetView();
-        Control.UpdateData updata = new Control.UpdateData();
-        public MainForm()
+        public static frm_MainForm instance;
+        public static frm_MainForm Instance()
         {
-            InitializeComponent();
+            //Đảm bảo luôn chỉ có duy nhất 1 instance của frm_MainForm được khởi tạo
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new frm_MainForm();
+            }
+            else {
+               instance.LoadView("");
+            }
+            return instance; 
+        }  
+        public frm_MainForm()
+        {
+           instance = this;
+           InitializeComponent();
+           this.LoadView("");
         }
 
         private void btn_tim_kiem_Click(object sender, EventArgs e)
@@ -26,7 +38,7 @@ namespace QLKhoHang.Views
            
             if (txt_kh_id.Text == "")
             {
-
+                MessageBox.Show(Share.Constant.notValue_msg, Share.Constant.Error_msg_cap, MessageBoxButtons.OK);
             }else
             {
                 this.LoadView(txt_kh_id.Text);
@@ -41,6 +53,7 @@ namespace QLKhoHang.Views
     
         public void LoadView(string control)
         {
+            Control.GetView view = new Control.GetView();
             if (control == "")
             {
                 switch (view.view_kho_hang().err_code)
@@ -48,7 +61,7 @@ namespace QLKhoHang.Views
                     case QLKhoHang.Model.ErrorCode.fail:
                         MessageBox.Show(view.view_kho_hang().err_desc, Share.Constant.Error_msg_cap, MessageBoxButtons.OK);
                         break;
-                    case QLKhoHang.Model.ErrorCode.success:
+                    case QLKhoHang.Model.ErrorCode.success: 
                         dgv_all_kho.DataSource = view.view_kho_hang().data;
                         break;
                     case QLKhoHang.Model.ErrorCode.empty:
@@ -83,12 +96,7 @@ namespace QLKhoHang.Views
         {
             this.LoadView("");
         }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            this.LoadView("");
-        }
-
+ 
         private void addKhoHang1_SubmitClickCancel()
         {
             addKhoHang1.Visible = false;
@@ -96,6 +104,7 @@ namespace QLKhoHang.Views
 
         private void addKhoHang1_SubmitClickOK()
         {
+            Control.UpdateData updata = new Control.UpdateData();
             ResultsData<List<tbl_kho_hang>> rs = updata.AddKho(Share.Constant.khohang);
             switch (rs.err_code)     // lấy giá trị từ control. updatedata đổ về view 
             {
@@ -110,13 +119,21 @@ namespace QLKhoHang.Views
                     break;
             }
         }
-
-        
-
         private void dgv_all_kho_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string a = dgv_all_kho.CurrentRow.Cells["kh_id"].Value.ToString();
             
+            Share.Constant.khohang.kh_id = getdatarow("kh_id");
+            Share.Constant.khohang.kh_dia_chi = getdatarow("kh_dia_chi");
+            Share.Constant.khohang.kh_quan_ly = getdatarow("kh_quan_ly");
+            Share.Constant.khohang.kh_suc_chua =(int)dgv_all_kho.CurrentRow.Cells["kh_suc_chua"].Value;
+            frm_ChiTietKho chitiet = new frm_ChiTietKho();
+            chitiet.ShowDialog();
+           
+        }
+         private string getdatarow(string name) {
+             return dgv_all_kho.CurrentRow.Cells[name].Value.ToString();
         }
     }
+    
+
 }

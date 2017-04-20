@@ -16,7 +16,7 @@ namespace QLKhoHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Views.MainForm());
+            Application.Run(new Views.frm_MainForm());
         }
     }
 }

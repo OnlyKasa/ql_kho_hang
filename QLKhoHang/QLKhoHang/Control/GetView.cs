@@ -68,18 +68,61 @@ namespace QLKhoHang.Control
         {
             
         }
-        public  ResultsData<List<tbl_chi_tiet_kho>> view_chi_tiet(string id_kho_hang) 
-        {
-            ResultsData<List<tbl_chi_tiet_kho>> results = new ResultsData<List<tbl_chi_tiet_kho>>();
+       public  ResultsData<List<Model.ChiTiet>> view_chi_tiet(string id_kho_hang) 
+        {   
+            ResultsData<List<Model.ChiTiet>> results = new ResultsData<List<Model.ChiTiet>>();
             try
             {
-                var data = from chitiet in db.tbl_chi_tiet_khos where chitiet.kh_id == id_kho_hang select chitiet;
-               
-            }
-            catch(Exception ex )
-            {
-                
-            }
+                var data = from chitiet in db.tbl_chi_tiet_khos
+                           where chitiet.kh_id == id_kho_hang
+                           join hanghoa in db.tbl_hang_hoas
+                           on chitiet.hh_id equals hanghoa.hh_id
+                           select new
+                           {
+                               ct_id = chitiet.ct_id,
+                               hh_id = hanghoa.hh_id,
+                               hh_ten = hanghoa.hh_ten,
+                               hh_nha_cung_cap = hanghoa.hh_noi_san_xuat,
+                               ngay_cap_nhat = chitiet.ngay_cap_nhat,
+                               ct_soluong = chitiet.ct_so_luong
+                           };
+                     
+                 if (data.Count() > 0)
+                    {   
+                        List<ChiTiet> list = new List<ChiTiet>();
+                        
+                        foreach (var item in data)
+                        {
+                            Model.ChiTiet row = new ChiTiet() ;
+                            row.ct_id = item.ct_id ;
+                            row.hh_id = item.hh_id;
+                            row.hh_ten = item.hh_ten;
+                            row.hh_nha_cung_cap = item.hh_nha_cung_cap;
+                            row.ngay_cap_nhat = item.ngay_cap_nhat;
+                            row.ct_soluong = (double) item.ct_soluong;
+                            Share.Constant.tong_kho_chua += row.ct_soluong;
+                            list.Add(row);
+                        }
+                        results.data = list.ToList();
+                        results.err_desc = Share.Constant.func_rs_success;
+                        results.err_code = ErrorCode.success;  
+                    }
+                    else
+                    {
+                        results.data = null;
+                        results.err_desc = Share.Constant.func_rs_empty;
+                        results.err_code = ErrorCode.empty;
+                        Share.Constant.tong_kho_chua = 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    results.data = null;
+                    results.err_desc = ex.ToString();
+                    results.err_code = ErrorCode.fail;
+                    Share.Constant.tong_kho_chua = 0;
+                }
+         
             return results;
         }
     }

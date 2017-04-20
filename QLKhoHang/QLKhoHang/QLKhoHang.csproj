@@ -74,6 +74,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ChiTiet.cs" />
     <Compile Include="Model\DataQLK.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -84,23 +85,42 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Share\Constant.cs" />
-    <Compile Include="Views\AddKhoHang.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\AddKhoHang.Designer.cs">
-      <DependentUpon>AddKhoHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MainForm.cs">
+    <Compile Include="Share\Ultil.cs" />
+    <Compile Include="Views\frm_NhapXuat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Views\frm_NhapXuat.Designer.cs">
+      <DependentUpon>frm_NhapXuat.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\AddKhoHang.resx">
-      <DependentUpon>AddKhoHang.cs</DependentUpon>
+    <Compile Include="Views\uctrl_AddKhoHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\uctrl_AddKhoHang.Designer.cs">
+      <DependentUpon>uctrl_AddKhoHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_ChiTietKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_ChiTietKho.Designer.cs">
+      <DependentUpon>frm_ChiTietKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_MainForm.Designer.cs">
+      <DependentUpon>frm_MainForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\frm_NhapXuat.resx">
+      <DependentUpon>frm_NhapXuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\uctrl_AddKhoHang.resx">
+      <DependentUpon>uctrl_AddKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_ChiTietKho.resx">
+      <DependentUpon>frm_ChiTietKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_MainForm.resx">
+      <DependentUpon>frm_MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Model\DataQLK.dbml.layout">
       <DependentUpon>DataQLK.dbml</DependentUpon>
